@@ -21,26 +21,21 @@ using namespace std;
 class Solution {
    public:
     auto removeNthFromEnd(ListNode* head, int n) -> ListNode* {
-        auto* end = head;
-        auto* p = head;
+        auto dummy = ListNode{0, head};
+        auto* fast = head;
+        auto* slow = &dummy;
 
-        auto offset = n + 1;
-
-        while (end != nullptr && --offset >= 0) {
-            end = end->next;
+        while (n-- > 0) {
+            fast = fast->next;
         }
 
-        while (end != nullptr) {
-            p = p->next;
-            end = end->next;
+        while (fast != nullptr) {
+            slow = slow->next;
+            fast = fast->next;
         }
 
-        if (offset > 0) {
-            return p->next;
-        }
-
-        p->next = p->next->next;
-        return head;
+        slow->next = slow->next->next;
+        return dummy.next;
     }
 };
 // @lc code=end
