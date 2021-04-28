@@ -40,4 +40,13 @@ auto operator<<(std::ostream& out, ListNode const* head) -> std::ostream& {
     return out;
 }
 
+struct TreeNode {
+    int val{0};
+    TreeNode* left{nullptr};
+    TreeNode* right{nullptr};
+    TreeNode()  {}
+    explicit TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+};
+
 #endif
