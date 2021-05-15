@@ -3,17 +3,17 @@
     "version": "0.1.0",
     "main": "index.js",
     "repository": "https://github.com/magic-akari/leetcode.git",
-    "author": "阿卡琳 <hufan.akarin@Gmail.com>",
+    "author": "magic-akari <akari.ccino@gmail.com>",
     "license": "MIT",
     "type": "module",
-    "scripts": {
-        "postinstall": "node scripts/fix-lodash-es.js"
-    },
     "dependencies": {
-        "lodash-es": "~4"
+        "lodash-es": ">=4.17.20"
     },
     "devDependencies": {
         "@types/lodash-es": "~4",
-        "@types/node": "~12"
+        "@types/node": "~14"
+    },
+    "engines": {
+        "node": ">=14"
     }
 }

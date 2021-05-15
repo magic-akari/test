@@ -1,0 +1,7 @@
+{
+    "import lodash": {
+        "scope": "javascript",
+        "prefix": "import lodash",
+        "body": "import * as _ from \"lodash-es\";"
+    }
+}
